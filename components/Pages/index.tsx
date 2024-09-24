@@ -24,6 +24,14 @@ const Page: PageEl = (props, state:
     cart: Array<string>
   }, refresh, getProps) => {
 
+  getProps(async () => {
+    let cart = localStorage.getItem("cart")
+    if(cart)
+    {
+      state.cart = JSON.parse(cart)
+    }
+  })
+
   let styles = global.styles
   let name = "خوش آمدید"
 
@@ -88,11 +96,13 @@ const Page: PageEl = (props, state:
           onClick={() => {
             if (state.cart.includes(state.book.title)) {
               state.cart = state.cart.filter(bookname => state.book.title != bookname)
+              localStorage.setItem("cart", JSON.stringify(state.cart))
               state.form = null
               refresh()
             }
             else {
               state.cart.push(state.book.title)
+              localStorage.setItem("cart", JSON.stringify(state.cart))
               state.form = null
               refresh()
             }
