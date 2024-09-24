@@ -2,12 +2,11 @@
 
 export const Block = props => {
 
-
     if (!props.state.cart) {
         props.state.cart = []
     }
 
-    let size = props.state.cart.includes(props.book.title)?20:25
+    let size = props.state.cart.includes(props.book.title) ? 20 : 25
 
     return <c-c style={{
         width: 150, flex: 1, minWidth: 150,
@@ -37,9 +36,9 @@ export const Block = props => {
         <hr style={{ width: "90%", opacity: 0.4 }} />
         <f-csb style={{ width: "100%", padding: "5px 0" }}>
 
-            <img src={props.state.cart.includes(props.book.title)?
-            "https://cdn.ituring.ir/qepal/ok.svg":
-            "https://cdn.ituring.ir/qepal/cart.svg"}
+            <img src={props.state.cart.includes(props.book.title) ?
+                "https://cdn.ituring.ir/qepal/ok.svg" :
+                "https://cdn.ituring.ir/qepal/cart.svg"}
                 style={{
                     height: size, width: size, objectFit: "contain",
                     margin: "0 10px"
@@ -47,7 +46,7 @@ export const Block = props => {
 
             <c-x style={{ direction: "ltr", margin: "0 10px" }}>
                 <f-12><del>{(props.book.price as number).toLocaleString("fa-IR")} تومان</del></f-12>
-                <f-15>{(props.book.price*0.8 as number).toLocaleString("fa-IR")} تومان</f-15>
+                <f-15>{(props.book.price * 0.8 as number).toLocaleString("fa-IR")} تومان</f-15>
             </c-x>
         </f-csb>
     </c-c>
