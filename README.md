@@ -1,5 +1,6 @@
 This is a uservice project from Turing Research Team.
-<img src=(https://github.com/user-attachments/assets/45898c2e-324d-41b0-b3ad-942e938c3f8c)"
+![turing-logo](https://github.com/user-attachments/assets/b4b1b505-e64b-4ed7-8e2f-3f31f93727de)
+
 
 ## Getting Started
 
@@ -20,13 +21,13 @@ Open [https://xtal.ir/userv](https://xtal.ir/userv) with your browser to see the
 You can start editing the page by modifying `components/Pages/index.tsx`. The page auto-updates as you edit the file.
 <br/>
 <br/>
-<img src="![cart](https://github.com/user-attachments/assets/a75e761a-5c99-45ff-8589-b5b29bbc73b3)"
+![cart](https://github.com/user-attachments/assets/a75e761a-5c99-45ff-8589-b5b29bbc73b3)
 <br/>
 <br/>
-<img src="![add](https://github.com/user-attachments/assets/e3274546-ce90-4f90-bc42-016581b05902)"
+![add](https://github.com/user-attachments/assets/e3274546-ce90-4f90-bc42-016581b05902)
 <br/>
 <br/>
-<img src="![remove](https://github.com/user-attachments/assets/5597cb4c-d462-44ee-9822-f78fb305d707)"
+![remove](https://github.com/user-attachments/assets/5597cb4c-d462-44ee-9822-f78fb305d707)
 
 ## Learn More
 
