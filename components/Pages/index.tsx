@@ -13,12 +13,21 @@ import { Block } from './Block';
 
 
 export default p => Component(p, Page);
-const Page: PageEl = (props, state, refresh, getProps) => {
+const Page: PageEl = (props, state:
+  {
+    form:string,
+    book:{
+      title:string, author:string , country:string, imageLink:string,
+      price:number , language:string, pages:number
+
+    },
+    cart:Array<string>
+  }, refresh, getProps) => {
 
   let styles = global.styles
   let name = "خوش آمدید"
 
-
+  console.log(state)
 
 
   return (
@@ -62,17 +71,12 @@ const Page: PageEl = (props, state, refresh, getProps) => {
           <f-15>{(state.book.pages as number).toLocaleString("fa-IR")}</f-15>
         </f-c>
 
-        <g-b style={{backgroundColor: "#717774"}} onClick={()=>{
-          if(!state.faves)
-          {
-            state.faves = []
-          }
-          state.faves.push(state.book.title)
+        <g-b style={{backgroundColor: "#C69D65"}} onClick={()=>{
+          state.cart.push(state.book.title)
           state.form = null
           refresh()
         }}>
-          <img src="https://cdn.ituring.ir/research/0/heart.png"
-            style={{ height: 20, width: 20, objectFit: "contain"}} />
+          <f-13>افزودن به سبد خرید</f-13>
         </g-b >
 
 
